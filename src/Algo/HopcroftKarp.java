@@ -11,7 +11,7 @@ import java.util.stream.IntStream;
 /**
  * The Hopcroft-Karp algorithm is an algorithm that takes as input a bipartite graph and produces as output
  * a coupling of maximum cardinality,i.e.a set of edges as large as possible with
- * the property that tw o edges never share an end.
+ * the property that two edges never share an end.
  */
 public class HopcroftKarp {
     private final BipartiteGraph bGraph;
