@@ -156,7 +156,7 @@ public class BipartiteGraph implements Graph {
         var lines = Files.readAllLines(pathFile, StandardCharsets.UTF_8);
         var tabLR = lines.remove(0).split(" ");
         left = Integer.parseInt(tabLR[0]);
-        right = Integer.parseInt(tabLR[0]);
+        right = Integer.parseInt(tabLR[1]);
         lefts = new ArrayList<>();
         links = Integer.parseInt(lines.remove(0));
         this.bipartiteAdj = new ArrayList<>(right + left);
