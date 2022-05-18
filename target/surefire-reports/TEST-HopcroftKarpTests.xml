@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="HopcroftKarpTests" time="0.455" tests="12" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/mehdikhenissi/IdeaProjects/Hopcroft-Karp/target/test-classes:/Users/mehdikhenissi/IdeaProjects/Hopcroft-Karp/target/classes:/Users/mehdikhenissi/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar:/Users/mehdikhenissi/.m2/repository/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar:/Users/mehdikhenissi/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/mehdikhenissi/.m2/repository/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar:/Users/mehdikhenissi/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar:/Users/mehdikhenissi/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="FR"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/mehdikhenissi/IdeaProjects/Hopcroft-Karp/target/surefire/surefirebooter13990063385460925519.jar /Users/mehdikhenissi/IdeaProjects/Hopcroft-Karp/target/surefire 2022-05-19T01-15-00_542-jvmRun1 surefire16639601071247001622tmp surefire_016657416905014001371tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/mehdikhenissi/IdeaProjects/Hopcroft-Karp/target/test-classes:/Users/mehdikhenissi/IdeaProjects/Hopcroft-Karp/target/classes:/Users/mehdikhenissi/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar:/Users/mehdikhenissi/.m2/repository/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar:/Users/mehdikhenissi/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/mehdikhenissi/.m2/repository/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar:/Users/mehdikhenissi/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar:/Users/mehdikhenissi/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/mehdikhenissi"/>
+    <property name="user.language" value="fr"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2021-09-14"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/mehdikhenissi/IdeaProjects/Hopcroft-Karp"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="surefire.real.class.path" value="/Users/mehdikhenissi/IdeaProjects/Hopcroft-Karp/target/surefire/surefirebooter13990063385460925519.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="17+35-LTS-2724"/>
+    <property name="user.name" value="mehdikhenissi"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="11.6"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="/Users/mehdikhenissi/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/q5/57d7g16x339cgcykkfwb98vr0000gn/T/"/>
+    <property name="idea.version" value="2021.2.3"/>
+    <property name="java.version" value="17"/>
+    <property name="user.dir" value="/Users/mehdikhenissi/IdeaProjects/Hopcroft-Karp"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/mehdikhenissi/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17+35-LTS-2724"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="graphSevenTest" classname="HopcroftKarpTests" time="0.154"/>
+  <testcase name="graphFiveTest" classname="HopcroftKarpTests" time="0.003"/>
+  <testcase name="graphSixTest" classname="HopcroftKarpTests" time="0.003"/>
+  <testcase name="graphEightTest" classname="HopcroftKarpTests" time="0.069"/>
+  <testcase name="graphNineTest" classname="HopcroftKarpTests" time="0.051"/>
+  <testcase name="graphFourTest" classname="HopcroftKarpTests" time="0.001"/>
+  <testcase name="graphTenTest" classname="HopcroftKarpTests" time="0.049"/>
+  <testcase name="graphOneTest" classname="HopcroftKarpTests" time="0.001"/>
+  <testcase name="graphTwelveTest" classname="HopcroftKarpTests" time="0.054"/>
+  <testcase name="graphTwoTest" classname="HopcroftKarpTests" time="0"/>
+  <testcase name="graphElevenTest" classname="HopcroftKarpTests" time="0.055"/>
+  <testcase name="graphThreeTest" classname="HopcroftKarpTests" time="0.001"/>
+</testsuite>
