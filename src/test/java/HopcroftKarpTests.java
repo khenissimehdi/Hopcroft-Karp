@@ -10,6 +10,7 @@ public class HopcroftKarpTests {
     private final String dir = "testData/";
     @Test
     public void graphOneTest() throws IOException {
+        System.out.println("helooooooo");
         var algo = new HopcroftKarp(Path.of(dir+"g1.gr"));
         var res = algo.compute();
         assertEquals(res.size(), 7);
