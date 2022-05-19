@@ -153,21 +153,25 @@ public class BipartiteGraph implements Graph {
      * @param pathFile Path
      * */
     public void feedFromMat(Path pathFile) throws IOException {
-        var lines = Files.readAllLines(pathFile, StandardCharsets.UTF_8);
-        var tabLR = lines.remove(0).split(" ");
-        left = Integer.parseInt(tabLR[0]);
-        right = Integer.parseInt(tabLR[1]);
-        lefts = new ArrayList<>();
-        links = Integer.parseInt(lines.remove(0));
-        this.bipartiteAdj = new ArrayList<>(right + left);
-        IntStream.range(0, right + left).forEach(e -> bipartiteAdj.add(new LinkedList<>()));
-        for (int i = 0; i < links; i++) {
-            var parserArray = lines.get(i).split(" ");
-            var l = Integer.parseInt(parserArray[0]);
-            var r = Integer.parseInt(parserArray[1]) + left;
-            this.addEdge(l, r, 0);
-            this.addEdge(r, l, 0);
-            this.lefts.add(l);
-        }
+
+            var lines = Files.readAllLines(pathFile, StandardCharsets.UTF_8);
+            var tabLR = lines.remove(0).split(" ");
+            left = Integer.parseInt(tabLR[0]);
+            right = Integer.parseInt(tabLR[1]);
+            lefts = new ArrayList<>();
+            links = Integer.parseInt(lines.remove(0));
+            this.bipartiteAdj = new ArrayList<>(right + left);
+            IntStream.range(0, right + left).forEach(e -> bipartiteAdj.add(new LinkedList<>()));
+            for (int i = 0; i < links; i++) {
+                var parserArray = lines.get(i).split(" ");
+                var l = Integer.parseInt(parserArray[0]);
+                var r = Integer.parseInt(parserArray[1]) + left;
+                this.addEdge(l, r, 0);
+                this.addEdge(r, l, 0);
+                this.lefts.add(l);
+            }
+
+
+
     }
 }
