@@ -32,6 +32,10 @@ public class Edge {
         return start + " -- " + end + " ( " + value + " )";
     }
 
+    public String toSol() {
+        return start + " " + end;
+    }
+
     @Override
     public boolean equals(Object obj) {
         return obj instanceof Edge edge && edge.start == start && edge.end == end;

@@ -1,11 +1,19 @@
 package Algo;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.OpenOption;
 import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
 import java.util.*;
 import java.util.function.BiPredicate;
 import java.util.function.Predicate;
+import java.util.logging.Logger;
 import java.util.stream.IntStream;
 
 /**
@@ -20,6 +28,10 @@ public class HopcroftKarp {
     private final BiPredicate<Integer, Integer> notInM = (v, vPrime) -> !matches.contains(new Edge(v, vPrime));
     private final int[] level;
     private final boolean[] visited;
+    private enum State {FINISHED, NOT_FINISHED}
+    private State state = State.NOT_FINISHED;
+    private static Charset UTF_8 = StandardCharsets.UTF_8;
+    private static Logger logger  = Logger.getLogger(HopcroftKarp.class.getName());
 
     public HopcroftKarp(Path pathToFile) throws IOException {
         this.bGraph = new BipartiteGraph();
@@ -176,13 +188,38 @@ public class HopcroftKarp {
             }
             Arrays.fill(level, 0);
         }
+        state = State.FINISHED;
         return matches;
     }
 
+    /**
+     * Method that return a .sol file that contain the data inside the matched list
+     * 4
+     * 0 0
+     * 1 1
+     * 2 2
+     * 3 4
+     * */
+    public void toSol(String fileName) throws IOException {
+        if(!state.equals(State.FINISHED)){
+            logger.info("Please run the command Compute first the state is still finished");
+            return;
+        }
+        var sb = new StringBuilder();
+        sb.append(matches.size()).append("\n");
+        for (int i = 0; i < matches.size(); i++) {
+            sb.append(matches.get(i).toSol()).append("\n");
+        }
+        var filePath = Path.of("outFiles/"+fileName+".sol");
+        Files.write(filePath,sb.toString().getBytes());
+
+    }
+
     public static void main(String[] args) throws IOException {
-        var h = new HopcroftKarp(Path.of("g5.gr"));
-        var c = h.compute();
-        System.out.println(c.size());
+        var h = new HopcroftKarp(Path.of("testData/g5.gr"));
+       // var c = h.compute();
+       // System.out.println(c.size());
+        h.toSol("a");
 
     }
 }
