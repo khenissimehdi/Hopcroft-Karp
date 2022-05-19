@@ -2,7 +2,7 @@ import Algo.HopcroftKarp;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
-import java.nio.file.Path;
+
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -10,6 +10,7 @@ public class HopcroftKarpTests {
     @Test
     public void CustomGraphOne() throws IOException {
         var algo = new HopcroftKarp();
+        // Simple Bipartite graph
         var res = algo.compute("csGr");
         assertEquals(res.size(), 4);
     }
@@ -17,12 +18,14 @@ public class HopcroftKarpTests {
     @Test
     public void CustomGraphTwo() throws IOException {
         var algo = new HopcroftKarp();
+        // Simple Bipartite graph
         var res = algo.compute("csGr2");
         assertEquals(res.size(), 4);
     }
 
     @Test
     public void CustomGraphThree() throws IOException {
+        // More complicated graph based on the g3 graph but with less, edges more shuffled
         var algo = new HopcroftKarp();
         var res = algo.compute("csGr3");
         assertEquals(res.size(), 7);
@@ -30,6 +33,7 @@ public class HopcroftKarpTests {
 
     @Test
     public void CustomGraphFoor() throws IOException {
+        // More complicated graph based on the g5 and g6 graph but with less, edges more shuffled
         var algo = new HopcroftKarp();
         var res = algo.compute("csGr4");
         assertEquals(res.size(), 70);
